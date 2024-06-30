@@ -1,4 +1,4 @@
-name: Build/release
+name: Manual Build Windows
 
 on:
   workflow_dispatch:
@@ -24,7 +24,7 @@ jobs:
         uses: samuelmeuli/action-electron-builder@v1
         if: runner.os == 'Windows'
         with:
-          skip_build: true
+          # skip_build: true
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
           github_token: ${{ secrets.github_token }}
